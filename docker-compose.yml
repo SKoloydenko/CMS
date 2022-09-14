@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+  db:
+    container_name: postgres
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_DB=CMS
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+      - ./schema.sql:/docker-entrypoint-initdb.d/1.sql
+      - ./data.sql:/docker-entrypoint-initdb.d/2.sql
+
+  app:
+    depends_on:
+      - db
+    image: app
+    container_name: app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    env_file: env/.dev.env
+    environment:
+      - DB_URI=postgresql://user:password@db:5432/CMS
+    ports:
+      - "80:80"
+
+volumes:
+  db-data:
