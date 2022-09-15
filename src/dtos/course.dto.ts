@@ -11,6 +11,7 @@ export function CoursePreviewResponseDTO(
   course: Course
 ): CoursePreviewResponse {
   return {
+    id: course.id,
     title: course.title,
     startingDate: course.startingDate,
     finishingDate: course.finishingDate,
@@ -19,6 +20,7 @@ export function CoursePreviewResponseDTO(
 
 export function CourseResponseDTO(course: Course): CourseResponse {
   return {
+    id: course.id,
     title: course.title,
     description: course.description,
     startingDate: course.startingDate,

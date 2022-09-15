@@ -8,12 +8,14 @@ export interface CourseRequest {
 }
 
 export interface CoursePreviewResponse {
+  id: number;
   title: string;
   startingDate: string;
   finishingDate: string;
 }
 
 export interface CourseResponse {
+  id: number;
   title: string;
   description: string;
   startingDate: string;
