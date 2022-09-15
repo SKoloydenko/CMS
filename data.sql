@@ -1,19 +1,16 @@
 insert into courses (
-    id,
     title,
     description,
     starting_date,
     finishing_date
   )
 values (
-    1,
     'Курс 1',
     'Описание 1',
     '2022-09-01',
     '2023-01-01'
   );
 insert into users (
-    id,
     email,
     password,
     name,
@@ -22,7 +19,6 @@ insert into users (
     role
   )
 values (
-    1,
     'common@alive.kfc',
     '$2a$08$TCN5qyLdjH.7uwSC1s452.uA/8a72mJ7Sz.8NpZexkb.JMVpCtDQK',
     'Коммон',
@@ -31,7 +27,6 @@ values (
     'ADMIN'
   ),
   (
-    2,
     'user1@email.com',
     '$2a$08$TCN5qyLdjH.7uwSC1s452.uA/8a72mJ7Sz.8NpZexkb.JMVpCtDQK',
     'Name 1',
@@ -40,7 +35,6 @@ values (
     'USER'
   ),
   (
-    3,
     'user2@email.com',
     '$2a$08$TCN5qyLdjH.7uwSC1s452.uA/8a72mJ7Sz.8NpZexkb.JMVpCtDQK',
     'Name 2',
@@ -49,7 +43,6 @@ values (
     'USER'
   ),
   (
-    4,
     'user3@email.com',
     '$2a$08$TCN5qyLdjH.7uwSC1s452.uA/8a72mJ7Sz.8NpZexkb.JMVpCtDQK',
     'Name 3',
